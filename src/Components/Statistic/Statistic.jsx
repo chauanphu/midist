@@ -21,7 +21,7 @@ const Statistic = ({ header, description, figures}) => {
     <div className="impact-statistics py-20 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-semibold text-gray-900">{header}</h2>
+          <h2 className="text-4xl font-semibold text-gray-900 mb-2">{header}</h2>
           <p className="text-lg text-gray-700">
             {description}
           </p>

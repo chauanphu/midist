@@ -5,18 +5,21 @@ import ProjectFeature from './ProjectFeature/ProjectFeature';
 const projects = [
     {
         id: 1,
+        to: '/parcel_locker',
         title: 'Parcel Locker',
         description: 'Developing AI-driven technologies for self-driving vehicles and autonomous robotics.',
         imageUrl: 'https://via.placeholder.com/400x300'
     },
     {
         id: 2,
+        to: '/student_tracking',
         title: 'Student Tracking',
         description: 'Leveraging machine learning to improve diagnostics and patient outcomes.',
         imageUrl: 'https://via.placeholder.com/400x300'
     },
     {
         id: 3,
+        to: '/ai4health',
         title: 'AI4Health',
         description: 'Enhancing AI’s understanding of human language for better communication and automation.',
         imageUrl: 'https://via.placeholder.com/400x300'
@@ -70,6 +73,7 @@ const Feature = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
                     {projects.map((project, index) => (
                         <ProjectFeature
+                            to={project.to}
                             key={project.id}
                             id={project.id}
                             index={index}

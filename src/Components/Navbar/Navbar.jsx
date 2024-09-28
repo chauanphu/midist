@@ -5,7 +5,7 @@ import DesktopMenu from './DesktopMenu/DesktopMenu';
 import MobileMenu from './MobileMenu/MobileMenu';
 import MenuButton from './MenuButton/MenuButton';
 
-const Navbar = () => {
+const Navbar = ({ footerRef }) => {
     const [scroll, setScroll] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
     const [dropDown, setDropDown] = useState(false);
@@ -19,12 +19,26 @@ const Navbar = () => {
             }
         };
 
+        
         window.addEventListener('scroll', handleScroll);
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
     }, []);
-
+    
     const handleOpenMenu = () => setOpenMenu(!openMenu);
-
+    
     const handleDropDown = () => setDropDown(!dropDown);
+    
+    const scrollToFooter = () => {
+        if (footerRef) {
+            console.log(footerRef)
+            footerRef.current.scrollIntoView({ behavior: 'smooth'});
+        } else {
+            console.error('fail')
+        }
+    } 
 
     return (
         <nav
@@ -40,12 +54,12 @@ const Navbar = () => {
                         </span>
                     </div>
 
-                    <DesktopMenu className='' scroll={scroll} dropDown={dropDown} handleDropDown={handleDropDown}/>
+                    <DesktopMenu  className='' scroll={scroll} dropDown={dropDown} handleDropDown={handleDropDown} scrollToFooter={scrollToFooter}/>
 
                     <MenuButton scroll={scroll} openMenu={openMenu} handleOpenMenu={handleOpenMenu} />
                 </div>
             </div>
-            <MobileMenu scroll={scroll} dropDown={dropDown} handleDropDown={handleDropDown} openMenu={openMenu} handleOpenMenu={handleOpenMenu}/>
+            <MobileMenu scroll={scroll} dropDown={dropDown} handleDropDown={handleDropDown} openMenu={openMenu} handleOpenMenu={handleOpenMenu} scrollToFooter={scrollToFooter}/>
         </nav>
     )
 }

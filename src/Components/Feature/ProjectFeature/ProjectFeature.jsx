@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-const ProjectFeature = ({ id, index, imageUrl, title, description, counterVariants }) => {
+const ProjectFeature = ({ to, id, index, imageUrl, title, description, counterVariants }) => {
     return (
         <motion.div
             key={id}
@@ -30,9 +30,9 @@ const ProjectFeature = ({ id, index, imageUrl, title, description, counterVarian
                 <p className="text-gray-700 mb-6">{description}</p>
 
                 {/* Learn More Link */}
-                <a href="#" className="text-indigo-600 hover:text-indigo-800 font-medium">
+                <Link to={to} className="text-indigo-600 hover:text-indigo-800 font-medium">
                     Learn More &rarr;
-                </a>
+                </Link>
             </div>
         </motion.div>
     )

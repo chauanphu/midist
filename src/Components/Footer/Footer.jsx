@@ -1,11 +1,11 @@
-import React from 'react'
-import { MailIcon, PhoneIcon, LocationMarkerIcon } from '@heroicons/react/outline';
-import { FaLinkedin, FaTwitter, FaGithub, FaYoutube } from 'react-icons/fa';
+import { LocationMarkerIcon, MailIcon, PhoneIcon } from '@heroicons/react/outline';
+import React from 'react';
+import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 
-const Footer = () => {
+const Footer = React.forwardRef((props, ref) => {
   return (
-    <footer className="bg-gray-900 text-gray-200 py-12">
+    <footer ref={ref} className="bg-gray-900 text-gray-200 py-12">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
@@ -58,12 +58,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 text-center text-gray-500 text-sm">
+        <div className="mt-8 bg-indigo-800 text-center text-gray-500 text-sm">
           <p>&copy; 2024 MIDIS Lab. All rights reserved.</p>
         </div>
       </div>
     </footer>
   )
-}
+});
 
-export default Footer
+export default Footer;

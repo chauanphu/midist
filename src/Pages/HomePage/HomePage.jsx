@@ -8,7 +8,7 @@ import Overview from '../../Components/Overview/Overview';
 import Statistic from '../../Components/Statistic/Statistic';
 import Team from '../../Components/Team/Team';
 import { AcademicCapIcon, ChipIcon, LightBulbIcon, GlobeIcon, CurrencyDollarIcon } from '@heroicons/react/outline'; 
-
+import { DrMembers } from '../../Data/Data';
 
 const topics = [
   {
@@ -105,11 +105,12 @@ const HomePage = () => {
         <Team
           header='Our Team'
           description='Meet the experts driving innovation at MIDIS Lab.'
+          members={DrMembers}
+          className='my-20'
         />
 
         <Collab/>
 
-        <Footer/>
     </div>
   )
 }

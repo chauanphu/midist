@@ -16,7 +16,7 @@ const About = ({ header, description, points = [], imageUrl, reverse = false, co
 
     return (
         <div ref={ref} className="about-section py-20 bg-gray-100">
-            <div className={`max-w-6xl mx-auto gap-8 items-center flex sm:flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+            <div className={`max-w-6xl mx-auto gap-8 items-center flex ${reverse ? 'flex-col-reverse' : 'flex-col'} ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
 
                 {/* Left Column: Mission and Key Focus Areas */}
                 <motion.div

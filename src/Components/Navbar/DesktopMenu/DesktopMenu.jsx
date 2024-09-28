@@ -3,10 +3,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const DesktopMenu = ({ className, scroll, dropDown, handleDropDown}) => {
+const DesktopMenu = ({ className, scroll, dropDown, handleDropDown, scrollToFooter }) => {
     return (
         <div className={`hidden md:flex space-x-6 ${className}`} >
-            <Link 
+            <Link
                 to="/"
                 className={` hover:cursor-pointer hover:text-indigo-600 ${scroll ? 'text-gray-800' : 'text-white'}`}
             >
@@ -61,7 +61,12 @@ const DesktopMenu = ({ className, scroll, dropDown, handleDropDown}) => {
             <a className={`${scroll ? 'text-gray-800' : 'text-white'} hover:cursor-pointer hover:text-indigo-600`}>Team</a>
             <a className={`${scroll ? 'text-gray-800' : 'text-white'} hover:cursor-pointer hover:text-indigo-600`}>Publications</a>
             <a className={`${scroll ? 'text-gray-800' : 'text-white'} hover:cursor-pointer hover:text-indigo-600`}>News</a>
-            <a className={`${scroll ? 'text-gray-800' : 'text-white'} hover:cursor-pointer hover:text-indigo-600`}>Contact</a>
+            <a
+                onClick={() => scrollToFooter()}
+                className={`${scroll ? 'text-gray-800' : 'text-white'} hover:cursor-pointer hover:text-indigo-600`}
+            >
+                Contact
+            </a>
         </div>
     )
 }

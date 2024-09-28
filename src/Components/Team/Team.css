@@ -1,0 +1,29 @@
+#placeholder {
+    overflow-y: scroll; /* Make sure scroll is enabled */
+}
+
+#placeholder::-webkit-scrollbar {
+    height: .6rem;
+}
+
+#placeholder::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+#placeholder::-webkit-scrollbar-thumb {
+    background: transparent;
+    width: 0.1rem;
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#placeholder:hover::-webkit-scrollbar-thumb {
+    background: rgb(17 24 39 / 1); /* Thumb color on hover */
+}
+
+#placeholder::-webkit-scrollbar-thumb:hover {
+    background: rgb(17 24 39); /* Slightly different color on thumb hover */
+}
+
+#placeholder:hover::-webkit-scrollbar-track {
+    background: transparent; /* Ensure track background remains transparent */
+}
