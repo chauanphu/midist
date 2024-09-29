@@ -8,8 +8,6 @@ import { DrMembers, figures, points, StudentMembers, topics } from '../../../Dat
 
 const AI4Health = () => {
 
-  console.log(DrMembers, ' ', StudentMembers);
-
   return (
     <div>
       <Hero
