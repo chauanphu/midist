@@ -1,5 +1,6 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Collab = () => {
   return (
@@ -12,19 +13,21 @@ const Collab = () => {
       >
         <h2 className="text-3xl font-bold mb-6">Collaborate with Us</h2>
         <p className="text-lg mb-8">
-          Interested in working together on groundbreaking AI research? Let’s connect and explore partnership opportunities.
+          Interested in working together on groundbreaking AI research? Let’s
+          connect and explore partnership opportunities.
         </p>
-        <motion.a
-          href="#contact"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="inline-block px-6 py-3 bg-white text-indigo-600 rounded-lg text-lg font-medium"
-        >
-          Get in Touch
-        </motion.a>
+        <Link to="/contact">
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block px-6 py-3 bg-white text-indigo-600 rounded-lg text-lg font-medium"
+          >
+            Get in Touch
+          </motion.a>
+        </Link>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Collab
+export default Collab;
