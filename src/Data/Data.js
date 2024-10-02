@@ -187,6 +187,13 @@ export const DrMembers = [
     name: 'MSc. Phan Thị Thanh Thủy',
     title: 'Principal Researcher',
     organization: 'Vietlife Clinic No. 4'
+  },
+  {
+    avatar:
+      'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
+    name: 'Đỗ Thị Hồng Nhung',
+    title: 'Research Member',
+    organization: 'International University - VNU'
   }
 ];
 
@@ -240,11 +247,4 @@ export const StudentMembers = [
     title: 'Research Member',
     organization: 'International University - VNU'
   },
-  {
-    avatar:
-      'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
-    name: 'Đỗ Thị Hồng Nhung',
-    title: 'Research Member',
-    organization: 'International University - VNU'
-  }
 ];
