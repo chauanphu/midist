@@ -70,19 +70,16 @@ const MobileMenu = ({
                             )}
                         </div>
                         <a
-                            href="#team"
                             className={`block px-4 py-2  hover:bg-indigo-600 hover:text-white ${scroll ? 'text-gray-800' : 'text-white'}`}
                         >
                             Research Team
                         </a>
                         <a
-                            href="#publications"
                             className={`block px-4 py-2  hover:bg-indigo-600 hover:text-white ${scroll ? 'text-gray-800' : 'text-white'}`}
                         >
                             Publications
                         </a>
                         <a
-                            href="#events"
                             className={`block px-4 py-2  hover:bg-indigo-600 hover:text-white ${scroll ? 'text-gray-800' : 'text-white'}`}
                         >
                             Events & News
